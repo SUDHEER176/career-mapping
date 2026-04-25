@@ -12,7 +12,7 @@ const Navbar = () => (
       <div className="hidden md:flex items-center gap-10">
         <a href="#features" className="nav-link">Features</a>
         <a href="#analyze" className="nav-link">Synthesize</a>
-        <a href="https://github.com" className="nav-link">GitHub</a>
+        
       </div>
 
       <button className="hidden md:flex btn-primary !h-10 !px-6 !text-xs !font-black uppercase tracking-widest">
