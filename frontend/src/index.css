@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-background text-primary selection:bg-primary selection:text-background antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03", "tnum";
+  }
+}
+
+@layer components {
+  /* Obsidian Glass - Deep, Saturated, Sharp */
+  .glass-card {
+    @apply bg-surface/40 backdrop-blur-2xl backdrop-saturate-[1.8] border border-white/5 rounded-2xl transition-all duration-700;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-background font-black h-14 px-10 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 uppercase tracking-tighter text-lg;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent border border-border text-primary font-black h-14 px-10 rounded-xl hover:bg-white/5 transition-all flex items-center justify-center gap-3 uppercase tracking-tighter text-lg;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-secondary/50;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-8 py-32;
+  }
+}
+
+/* Film Grain Overly */
+.noise-overlay {
+  position: fixed;
+  inset: -200%;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Dynamic Vignette */
+.vignette {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.4) 100%);
+}
+
+.bg-grid {
+  background-image: radial-gradient(circle at 1px 1px, #27272a 1px, transparent 0);
+  background-size: 60px 60px;
+}
