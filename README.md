@@ -1,67 +1,64 @@
-# CareerMap AI: Intelligent Career Path Narrator
+# 🚀 CareerMap AI
 
-CareerMap AI is a premium, AI-driven platform designed to help students and professionals navigate their career journeys with precision. Using the power of Gemini LLM, it provides personalized roadmaps, skill gap analysis, and learning recommendations.
+CareerMap AI is a next-generation, intelligent career navigation platform. Powered by **Llama-3 via Groq**, it deeply analyzes your professional DNA to synthesize high-fidelity career roadmaps, generate tailored job assets, and future-proof your trajectory against market shifts.
 
-## 🚀 Features
+## ✨ Advanced AI Capabilities (Command Center)
 
-- **Personalized Narratives**: Converts your interests and background into viable career paths.
-- **Skill Gap Analysis**: Identifies exactly what skills you need to acquire.
-- **Action Roadmaps**: Provides a 6-12 month tangible plan.
-- **Premium UI**: Futuristic Nebula-themed interface with smooth animations and glassmorphism.
+1. **Career Pathway Synthesis**: Generates a 6-12 month roadmap tailored to your specific time commitment and target goals.
+2. **Cover Letter & Resume Synthesis**: Instantly creates personalized cover letters and ATS-optimized bullet points for your target role.
+3. **ATS Resume Scanner**: Paste your raw resume to get a 0-100 match score, identify missing keywords, and get instant bullet point rewrites.
+4. **Mock Interview Generator**: Generates 10 tiered interview questions (behavioral, technical, system design) tailored to your exact skill level.
+5. **Salary Intelligence**: Provides local market ranges, proven negotiation scripts, and red flags to watch for in offers.
+6. **LinkedIn Optimizer**: Rewrites your headline and 'About' section using recruiter psychology (PSB formula).
+7. **Culture Matcher**: Finds the top 10 companies that align exactly with your work style and environment preferences.
+8. **Skill Decay Predictor**: Evaluates your current stack to predict which skills will be obsolete in 2 years and what to learn immediately to stay resilient.
+9. **Portfolio Blueprint**: Generates 3 highly specific, compelling project ideas (with tech stacks) guaranteed to impress hiring managers.
+10. **Networking Strategy**: Delivers a 30/60/90-day networking plan, cold outreach templates, and specific communities to join.
 
 ## 🛠 Tech Stack
 
-- **Frontend**: Vanilla HTML5, CSS3 (Modern Flex/Grid), JavaScript (ES6+).
-- **Backend**: Python 3.x, FastAPI.
-- **AI Engine**: Google Gemini 1.5 Flash.
+- **Frontend**: React, Vite, TailwindCSS, Framer Motion, Lucide React
+- **Backend**: Python 3.x, FastAPI, Uvicorn
+- **AI Engine**: Llama-3.3-70b-versatile (via Groq API)
 
 ## 📁 Project Structure
 
 ```text
 career/
-├── backend/            # FastAPI Backend
-│   ├── main.py
+├── backend/                  # FastAPI Backend (AI Core)
+│   ├── main.py               # 10 advanced Gen AI endpoints
 │   ├── requirements.txt
-│   └── .env            # Add your GOOGLE_API_KEY here
-└── frontend/           # Stunning Landing Page
-    ├── index.html
-    ├── style.css
-    └── script.js
+│   └── .env                  # Add your GROQ_API_KEY here
+└── frontend/                 # React UI (Cinematic Terminal)
+    ├── src/
+    │   ├── components/       # UI Components & Advanced Tools Dashboard
+    │   ├── App.jsx           # Main Application Logic
+    │   ├── index.css         # Custom Glassmorphism & Tailwind Directives
+    │   └── main.jsx
+    ├── package.json
+    ├── tailwind.config.js
+    └── vite.config.js
 ```
 
-## ⚙️ Setup Instructions
+## 🚀 Quick Start Guide
 
-### 1. Backend Setup
-1. Navigate to the `backend` directory.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Add your Gemini API Key to `.env`:
-   ```env
-   GOOGLE_API_KEY=your_actual_key_here
-   ```
-4. Run the server:
-   ```bash
-   python main.py
-   ```
+### 1. Start the Backend (API)
+```bash
+cd backend
+pip install -r requirements.txt
+# Create a .env file and add your Groq API key:
+# GROQ_API_KEY=gsk_your_api_key_here
+python main.py
+# Server runs on http://localhost:8001
+```
 
-### 2. Frontend Setup
-1. Navigate to the `frontend` directory.
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open the URL provided by Vite (usually `http://localhost:5173`).
+### 2. Start the Frontend (UI)
+```bash
+cd frontend
+npm install
+npm run dev
+# App runs on http://localhost:5173
+```
 
-## 🎨 Design Philosophy
-The UI is a **"Quantum Career Flux"** theme. It uses:
-- **Framer Motion**: For smooth entry animations and interactive layout shifts.
-- **Tailwind CSS**: For a clean, modular, and responsive design system.
-- **Lucide Icons**: For sharp, consistent, and meaningful iconography.
-- **Glassmorphism**: High-blur background elements to create depth.
-#
+## 🔒 Security Note
+Ensure your `backend/.env` is never pushed to public repositories. This is automatically handled by the root `.gitignore`.
