@@ -34,7 +34,7 @@ const App = () => {
     setLoading(true);
     setRoadmap(null);
     try {
-      const response = await fetch('http://localhost:8001/generate-path', {
+      const response = await fetch('https://career-mapping.onrender.com/generate-path', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

@@ -119,7 +119,7 @@ const AdvancedTools = ({ baseProfile }) => {
     };
 
     try {
-      const response = await fetch(`http://localhost:8001${activeTool.endpoint}`, {
+      const response = await fetch(`https://career-mapping.onrender.com${activeTool.endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
